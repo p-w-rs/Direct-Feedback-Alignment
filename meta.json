@@ -1,0 +1,12 @@
+{
+  "description": "Implementation of the direct feedback alignment algorithm for training deep neural networks in Julia.",
+  "status": "DONE",
+  "references": [
+    {
+      "title": "Direct Feedback Alignment Provides Learning in Deep Neural Networks",
+      "url": "https://arxiv.org/abs/1609.01596",
+      "year": 2016
+    }
+  ],
+  "tags": ["Julia", "Deep Learning", "Neural Networks", "Feedback Alignment"]
+}
