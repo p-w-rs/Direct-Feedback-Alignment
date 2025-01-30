@@ -7,6 +7,7 @@ This project implements a neural network trained on the MNIST dataset using the 
 This code is designed as an educational tool to clarify the DFA algorithm, rather than as a high-performance or state-of-the-art implementation. It prioritizes readability and simplicity over speed or achieving the best possible accuracy.
 
 The implementation trains a 3-layer neural network (784 -> 64 -> 32 -> 10) on the MNIST dataset.
+
 ## Libraries Used
 
 This implementation uses the following Julia libraries which will need to be installed to run the code: MLDatasets, OneHotArrays, LinearAlgebra, Random, ProgressMeter, Plots
@@ -29,7 +30,7 @@ The main components of the code are:
 3. Training Loop:
    - Forward pass through the network
    - Error calculation
-   - Backward pass using feedback alignment matrices
+   - Backward pass using direct feedback alignment matrices
    - Weight updates
 4. Evaluation: Calculate and store training accuracy, test accuracy, and training loss for each epoch.
 5. Visualization: Plot the learning progress over time.
