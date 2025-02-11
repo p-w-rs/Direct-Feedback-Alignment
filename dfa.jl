@@ -55,10 +55,10 @@ for epoch in 1:200
 
         # Forward pass
         a1 = W[1] * x .+ b[1]
-        h1 = σ.(a1)
+        h1 = σ(a1)
 
         a2 = W[2] * h1 .+ b[2]
-        h2 = σ.(a2)
+        h2 = σ(a2)
 
         ay = W[3] * h2 .+ b[3]
         ŷ, ŷ′ = softmax(ay), softmax′(ay)
@@ -68,8 +68,8 @@ for epoch in 1:200
 
         # Backward pass and weight update (using direct feedback alignment)
         δay = B[3] * e # B is the identity matrix so doesn't affect the error
-        δa2 = B[2] * e .* σ′.(a2)
-        δa1 = B[1] * e .* σ′.(a1)
+        δa2 = B[2] * e .* σ′(a2)
+        δa1 = B[1] * e .* σ′(a1)
 
         ΔW3 = δay * h2'
         ΔW2 = δa2 * h1'
